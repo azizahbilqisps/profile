@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet [Your Name] | Digital Marketing Professional</title>
+    <style>
+        :root {
+            --brand: #d97757; /* Warm Terracotta - Inviting and energetic */
+            --bg-light: #faf9f6; /* Off-white */
+            --bg-dark: #2c2c2c; /* Deep Charcoal */
+            --text-main: #333333;
+            --text-muted: #777777;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- Intro Section --- */
+        .intro-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
+            padding: 60px 0;
+            gap: 50px;
+        }
+
+        .intro-text { flex: 1; }
+        .intro-text h1 { font-size: 4rem; line-height: 1.1; margin: 0 0 20px 0; }
+        .intro-text p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px; max-width: 450px; }
+        
+        .intro-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* The Photo Frame */
+        .photo-wrapper {
+            width: 400px;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: -20px 20px 0px var(--brand); /* Cool offset shadow effect */
+        }
+
+        .photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: #ddd; /* Fallback color */
+        }
+
+        /* --- Experience Highlight Section --- */
+        .experience-section {
+            background-color: var(--bg-dark);
+            color: white;
+            padding: 100px 0;
+            border-radius: 40px 40px 0 0; /* Soft rounded top */
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+
+        .section-title span { color: var(--brand); }
+
+        /* Timeline Design */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* The vertical line */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: rgba(255,255,255,0.1);
+            top: 0;
+            bottom: 0;
+            left: 50px;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 20px 0 40px 100px;
+            position: relative;
+        }
+
+        /* The timeline dots */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: auto;
+            left: 42px;
+            top: 26px;
+            background-color: var(--brand);
+            border: 4px solid var(--bg-dark);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .role-title { font-size: 1.5rem; font-weight: bold; margin: 0 0 5px 0; }
+        .company-date { color: var(--brand); font-weight: 600; margin-bottom: 15px; font-size: 0.95rem; }
+        .role-desc { color: #cccccc; max-width: 600px; }
+
+        /* --- Contact / Footer --- */
+        .contact-section {
+            text-align: center;
+            padding: 100px 20px;
+            background: var(--bg-dark);
+            color: white;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--brand);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover { transform: scale(1.05); }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .intro-section { flex-direction: column-reverse; text-align: center; padding: 40px 20px; }
+            .intro-text h1 { font-size: 2.8rem; }
+            .intro-image { justify-content: center; width: 100%; }
+            .photo-wrapper { width: 100%; max-width: 350px; height: 400px; box-shadow: -10px 10px 0px var(--brand); }
+            .timeline::after { left: 20px; }
+            .timeline-item { padding: 20px 0 40px 50px; }
+            .timeline-item::after { left: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section class="intro-section">
+            <div class="intro-text">
+                <h1>Hi, I'm <br><span style="color: var(--brand);">[Your Name]</span></h1>
+                <p>A Digital Marketing Strategist focused on building brands, driving revenue, and telling stories that actually convert. I turn data into human connections.</p>
+                <a href="#experience" class="btn">See My Experience</a>
+            </div>
+            
+            <div class="intro-image">
+                <div class="photo-wrapper">
+                    <img src="https://via.placeholder.com/400x500/dddddd/999999?text=Your+Photo+Here" alt="Portrait of [Your Name]">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title">My <span>Experience</span></h2>
+            
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <h3 class="role-title">Senior Growth Marketer</h3>
+                    <div class="company-date">Acme Tech Corp | 2023 - Present</div>
+                    <p class="role-desc">Spearheaded the shift from purely performance-based marketing to a balanced brand/performance split. Managed a monthly ad budget of $150k across Meta and Google, reducing Customer Acquisition Cost (CAC) by 22% within the first two quarters.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="role-title">Digital Marketing Manager</h3>
+                    <div class="company-date">Creative Agency LLC | 2020 - 2023</div>
+                    <p class="role-desc">Led a team of 3 specialists to execute omni-channel campaigns for B2B clients. Developed a content syndication strategy that generated over 5,000 qualified leads in a single fiscal year.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3 class="role-title">SEO & Content Specialist</h3>
+                    <div class="company-date">Startup Inc. | 2018 - 2020</div>
+                    <p class="role-desc">Built the company's blog from scratch. Conducted extensive keyword research and on-page optimization, growing organic site traffic from 0 to 45,000 monthly unique visitors in 18 months.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-top: 0;">Let's build something together.</h2>
+            <p style="color: #cccccc; margin-bottom: 40px; font-size: 1.1rem;">I'm always open to discussing new opportunities or consulting projects.</p>
+            <a href="mailto:your.email@example.com" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+</body>
+</html>
